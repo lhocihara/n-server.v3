@@ -26,6 +26,17 @@ class Blockchain:
     # Instanciando um gerenciador do banco de dados TCC
     self.conexao_bd = conexao_servidor.TCC
 
+    v = self.conexao_bd.HBase.aggregate([
+      {
+          "$group": {
+              "_id": 0,
+              "maxQuantity": {"$max": "$timestamp"}
+          }
+      }
+      ])
+
+    print("oi oi")
+
     self.set_genesis_block()
 
   def set_genesis_block(self):
@@ -58,7 +69,7 @@ class Blockchain:
 
     self.blocks.append(hash)
 
-    self.conexao_bd.HBase.insert(block_formatted)
+    # self.conexao_bd.HBase.insert(block_formatted)
 
     print("\n bloco criado às " + datatime + " " + str(timestamp))
 
