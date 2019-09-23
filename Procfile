@@ -1,2 +1,2 @@
 web: python run.py
-worker: python auditor.py
+worker: python auditor/auditor.py
