@@ -1,6 +1,6 @@
 from apscheduler.schedulers.blocking import BlockingScheduler
 
-from orquestrador.orquestrador import lista_transc
+from orquestrador import lista_transc
 from blockchain import Blockchain
 
 sched = BlockingScheduler()

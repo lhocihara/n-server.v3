@@ -8,8 +8,8 @@ from datetime import datetime
 import hashlib
 
 from biblioteca_respostas.status_internos import StatusInternos
-from auditor.tipos_transacoes import Tipos_Transacoes
-from auditor.blockchain import Blockchain
+from tipos_transacoes import Tipos_Transacoes
+from blockchain import Blockchain
 
 lista_transc = Tipos_Transacoes()
 
