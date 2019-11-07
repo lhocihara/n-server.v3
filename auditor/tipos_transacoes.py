@@ -1,9 +1,13 @@
 from datetime import datetime
 
-class Tipos_Transacoes:
+class Tipos_Transacoes():
   def __init__(self):
     self.transacoes = []
 
+  def reset(self):
+    self.transacoes = []
+
+    
   # --------------------------------------------------------------------------
   # Logs acionados por acões em sistemas da aplicação
   # --------------------------------------------------------------------------

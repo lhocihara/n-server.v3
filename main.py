@@ -19,7 +19,7 @@ from rotas.externos import blueprint_externos
 ## ----------------------------------------------------------
 ## Instanciando a API
 ## ----------------------------------------------------------
-app = Flask("n-server", static_url_path = "/templates", static_folder = "templates")
+app = Flask("n-server")
 app.config.from_object('settings')
 
 
